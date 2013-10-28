@@ -40,7 +40,7 @@ NSString * const ConfigurationURL = @"https://dl.dropboxusercontent.com/u/577048
 				TCSBleuBeaconManager *manager = [TCSBleuBeaconManager sharedManager];
 				[manager addMappingWithDictionary:config];
 			[[NSOperationQueue mainQueue] addOperationWithBlock:^{
-
+				// This is hard-coded to match the beacons contained in the plist file above.
 				NSArray *URLs = [manager URLsForUUID:@"e2c56db5-dffb-48d2-b060-d0f5a71096e0" major:@"1" minor:@"2"];
 				[self loadURLs:URLs];
 				[self registerNotifications];
