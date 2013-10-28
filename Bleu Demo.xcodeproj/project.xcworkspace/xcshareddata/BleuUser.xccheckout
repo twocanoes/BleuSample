@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>117951FD-0584-4F8B-A172-CA3A47C4C72F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BleuUser</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>06826061-04E2-4435-BE08-20268D639D3E</key>
+		<string>https://github.com/jivadevoe/UIAlertView-Blocks.git</string>
+		<key>869F7F2D-37CD-432C-99E6-78A14EFA9C5C</key>
+		<string>ssh://github.com/twocanoes/Bleu.git</string>
+		<key>AB12299D-A222-40A6-BCD3-749DA65D3369</key>
+		<string>https://github.com/edgecase/ECSlidingViewController.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BleuUser/BleuUser.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>06826061-04E2-4435-BE08-20268D639D3E</key>
+		<string>../../../external/UIAlertView-Blocks</string>
+		<key>869F7F2D-37CD-432C-99E6-78A14EFA9C5C</key>
+		<string>../../..</string>
+		<key>AB12299D-A222-40A6-BCD3-749DA65D3369</key>
+		<string>../../../external/ECSlidingViewController</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/twocanoes/Bleu.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>869F7F2D-37CD-432C-99E6-78A14EFA9C5C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>869F7F2D-37CD-432C-99E6-78A14EFA9C5C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Bleu</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AB12299D-A222-40A6-BCD3-749DA65D3369</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ECSlidingViewController</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>06826061-04E2-4435-BE08-20268D639D3E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UIAlertView-Blocks</string>
+		</dict>
+	</array>
+</dict>
+</plist>
