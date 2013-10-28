@@ -162,8 +162,7 @@ NSString * const TCSBleuRangingNotification = @"TCSBleuRangingNotification";
 				index = @3;
 				break;
 		}
-		[[NSNotificationCenter defaultCenter] postNotificationName:TCSBleuRangingNotification object:self userInfo:@{@"index": index}];
-
+		[[NSNotificationCenter defaultCenter] postNotificationName:TCSBleuRangingNotification object:self userInfo:@{@"index": index, @"beacon": closestBeacon}];
 	}
 }
 
