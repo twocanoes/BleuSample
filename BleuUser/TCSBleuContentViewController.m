@@ -10,11 +10,9 @@
 #import "TCSBleuContentViewController.h"
 #import "TCSBleuBeaconManager.h"
 
-NSString * const ConfigurationURL = @"https://dl.dropboxusercontent.com/u/5770480/default.plist";
-
 @interface TCSBleuContentViewController ()
 @property (strong, nonatomic) NSOperationQueue *opQueue;
-
+@property (weak, nonatomic) UILabel *accuracyLabel;
 - (void)loadURLs:(NSArray *)URLs;
 
 @end
@@ -28,10 +26,14 @@ NSString * const ConfigurationURL = @"https://dl.dropboxusercontent.com/u/577048
 	self.opQueue = [[NSOperationQueue alloc] init];
 	self.opQueue.name = @"com.twocanoes.bleu.contentviewcontroller";
 
-	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:ConfigurationURL]];
-	
-	NSURLResponse *response;
-	//NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:NULL];
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	NSString *configURL = [defaults stringForKey:@"bleuConfigURL"];
+	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:configURL]];
+	UILabel *accuracyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0., 20., 100., 20.)];
+	accuracyLabel.backgroundColor = [UIColor whiteColor];
+	accuracyLabel.text = @"Accuracy";
+	[self.view addSubview:accuracyLabel];
+	self.accuracyLabel = accuracyLabel;
 	
 	[NSURLConnection sendAsynchronousRequest:request queue:self.opQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
 		if (!connectionError) {
@@ -51,6 +53,11 @@ NSString * const ConfigurationURL = @"https://dl.dropboxusercontent.com/u/577048
 
 }
 
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+	[self.accuracyLabel removeFromSuperview];
+	
+}
 - (void)loadURLs:(NSArray *)URLs
 {
 	for (int i = 0; i < 3; i++) {
@@ -83,10 +90,13 @@ NSString * const ConfigurationURL = @"https://dl.dropboxusercontent.com/u/577048
 		}];
 	}];
 	[[NSNotificationCenter defaultCenter] addObserverForName:TCSBleuRangingNotification object:nil queue:self.opQueue usingBlock:^(NSNotification *note) {
+		CLBeacon *beacon = note.userInfo[@"beacon"];
+		DLog(@"%f", beacon.accuracy);
 		NSUInteger index = [note.userInfo[@"index"] unsignedIntegerValue];
 		if (index == 3) return; //ignore "unknown" proximity
 		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
 			self.selectedIndex = index;
+			self.accuracyLabel.text = [NSString stringWithFormat:@"%f", beacon.accuracy];
 		}];
 	}];
 }
