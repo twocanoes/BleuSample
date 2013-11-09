@@ -20,6 +20,10 @@
 		76D24BAF17FF924600DFBC5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D24B8E17FF924600DFBC5A /* UIKit.framework */; };
 		AA39D4591811ACEB0000CDF8 /* TCSBleuContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA39D4581811ACEB0000CDF8 /* TCSBleuContentViewController.m */; };
 		AA87476A181E26E400ECBC74 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76D24B9217FF924600DFBC5A /* Info.plist */; };
+		AA87476C181ED59000ECBC74 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA87476B181ED59000ECBC74 /* libTestFlight.a */; };
+		AA87476F181ED5BB00ECBC74 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA87476E181ED5BB00ECBC74 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AA874771181ED5C600ECBC74 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA874770181ED5C600ECBC74 /* libz.dylib */; };
+		AA874773181EF53100ECBC74 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA874772181EF53100ECBC74 /* Settings.bundle */; };
 		AAACA51D180DF73A00362408 /* TCSBleuBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAACA51C180DF73A00362408 /* TCSBleuBeaconManager.m */; };
 		AAEBF2EC1810FC6B00C3DC59 /* BleuClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEBF2EA1810FC6B00C3DC59 /* BleuClientTest.m */; };
 		AAEBF2F018116B1200C3DC59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAEBF2EE18116B0E00C3DC59 /* InfoPlist.strings */; };
@@ -52,6 +56,11 @@
 		76D24BAC17FF924600DFBC5A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AA39D4571811ACEB0000CDF8 /* TCSBleuContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSBleuContentViewController.h; sourceTree = "<group>"; };
 		AA39D4581811ACEB0000CDF8 /* TCSBleuContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSBleuContentViewController.m; sourceTree = "<group>"; };
+		AA87476B181ED59000ECBC74 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = TestFlightSDK2/libTestFlight.a; sourceTree = "<group>"; };
+		AA87476D181ED5A500ECBC74 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = TestFlightSDK2/TestFlight.h; sourceTree = "<group>"; };
+		AA87476E181ED5BB00ECBC74 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		AA874770181ED5C600ECBC74 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		AA874772181EF53100ECBC74 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		AAACA519180DF2FE00362408 /* default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default.plist; sourceTree = "<group>"; };
 		AAACA51B180DF73A00362408 /* TCSBleuBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSBleuBeaconManager.h; sourceTree = "<group>"; };
 		AAACA51C180DF73A00362408 /* TCSBleuBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSBleuBeaconManager.m; sourceTree = "<group>"; };
@@ -65,9 +74,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA874771181ED5C600ECBC74 /* libz.dylib in Frameworks */,
+				AA87476F181ED5BB00ECBC74 /* iAd.framework in Frameworks */,
 				76D24B8B17FF924600DFBC5A /* Foundation.framework in Frameworks */,
 				76D24B8D17FF924600DFBC5A /* CoreGraphics.framework in Frameworks */,
 				76D24B8F17FF924600DFBC5A /* UIKit.framework in Frameworks */,
+				AA87476C181ED59000ECBC74 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +99,7 @@
 		76D24B7E17FF924600DFBC5A = {
 			isa = PBXGroup;
 			children = (
+				AA87476D181ED5A500ECBC74 /* TestFlight.h */,
 				76D24B9017FF924600DFBC5A /* Source */,
 				76D24BB217FF924600DFBC5A /* Bleu Client Tests */,
 				76D24B8917FF924600DFBC5A /* Frameworks */,
@@ -106,6 +119,9 @@
 		76D24B8917FF924600DFBC5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA874770181ED5C600ECBC74 /* libz.dylib */,
+				AA87476E181ED5BB00ECBC74 /* iAd.framework */,
+				AA87476B181ED59000ECBC74 /* libTestFlight.a */,
 				76D24B8A17FF924600DFBC5A /* Foundation.framework */,
 				76D24B8C17FF924600DFBC5A /* CoreGraphics.framework */,
 				76D24B8E17FF924600DFBC5A /* UIKit.framework */,
@@ -135,6 +151,7 @@
 		76D24B9117FF924600DFBC5A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA874772181EF53100ECBC74 /* Settings.bundle */,
 				76D24B9217FF924600DFBC5A /* Info.plist */,
 				76D24B9317FF924600DFBC5A /* InfoPlist.strings */,
 				76D24B9617FF924600DFBC5A /* main.m */,
@@ -242,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA874773181EF53100ECBC74 /* Settings.bundle in Resources */,
 				76D24BA617FF924600DFBC5A /* Images.xcassets in Resources */,
 				76D24B9517FF924600DFBC5A /* InfoPlist.strings in Resources */,
 				76D24B9E17FF924600DFBC5A /* Main.storyboard in Resources */,
@@ -321,7 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -363,7 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -403,6 +421,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BleuUser/Prefix.pch;
 				INFOPLIST_FILE = BleuUser/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/steve/Documents/TwoCanoes/BleuDemo/TestFlightSDK2,
+				);
 				OTHER_LDFLAGS = " -lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -417,6 +439,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BleuUser/Prefix.pch;
 				INFOPLIST_FILE = BleuUser/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/steve/Documents/TwoCanoes/BleuDemo/TestFlightSDK2,
+				);
 				OTHER_LDFLAGS = " -lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
