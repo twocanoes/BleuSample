@@ -77,9 +77,9 @@
 				AA874771181ED5C600ECBC74 /* libz.dylib in Frameworks */,
 				AA87476F181ED5BB00ECBC74 /* iAd.framework in Frameworks */,
 				76D24B8B17FF924600DFBC5A /* Foundation.framework in Frameworks */,
+				AA87476C181ED59000ECBC74 /* libTestFlight.a in Frameworks */,
 				76D24B8D17FF924600DFBC5A /* CoreGraphics.framework in Frameworks */,
 				76D24B8F17FF924600DFBC5A /* UIKit.framework in Frameworks */,
-				AA87476C181ED59000ECBC74 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +352,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 101;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -371,7 +370,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "D9630A6C-F3F5-4DA1-8392-752DD6710BCB";
 				SDKROOT = iphoneos;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -394,7 +392,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 101;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -406,7 +403,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "ED34500F-E435-4C0B-BD35-12E6556DFC78";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -418,15 +414,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BleuUser/Prefix.pch;
 				INFOPLIST_FILE = BleuUser/Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/steve/Documents/TwoCanoes/BleuDemo/TestFlightSDK2,
+					/Users/tperfitt/Documents/Projects/BleuSample/TestFlightSDK2,
 				);
 				OTHER_LDFLAGS = " -lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F474E73F-3E47-47B0-87E0-EF436ED3F399";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -436,15 +434,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BleuUser/Prefix.pch;
 				INFOPLIST_FILE = BleuUser/Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/steve/Documents/TwoCanoes/BleuDemo/TestFlightSDK2,
+					/Users/tperfitt/Documents/Projects/BleuSample/TestFlightSDK2,
 				);
 				OTHER_LDFLAGS = " -lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F474E73F-3E47-47B0-87E0-EF436ED3F399";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
