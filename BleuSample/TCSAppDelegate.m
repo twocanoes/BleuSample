@@ -17,12 +17,13 @@
 
 @implementation TCSAppDelegate 
 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
++ (void)initialize
 {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	[defaults registerDefaults:@{@"bleuConfigURL": @"https://dl.dropboxusercontent.com/s/ez2zprbn7825x8r/default.plist"}];
-
+	[defaults registerDefaults:@{@"bleuConfigURL": @"https://dl.dropboxusercontent.com/u/5770480/default.plist"}];
+}
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     return YES;
 }
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{

@@ -17,7 +17,8 @@
 typedef NS_ENUM(NSUInteger, TCSProximityIndex){
     kImmediate = 0,
     kNear,
-    kFar
+    kFar,
+	kDefault
 };
 
 /*!
@@ -34,7 +35,7 @@ extern NSString * const TCSBleuRangingNotification;
 @protocol CLLocationManagerDelegate;
 
 @interface TCSBleuBeaconManager : NSObject <CLLocationManagerDelegate>
-
+@property (strong, readonly) NSString *defaultURL;
 + (instancetype) sharedManager;
 
 /*!
@@ -70,4 +71,5 @@ extern NSString * const TCSBleuRangingNotification;
  to CoreLocation.
  */
 - (void)beginRegionMonitoring;
+
 @end
