@@ -19,6 +19,7 @@
 		76D24BAE17FF924600DFBC5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D24B8A17FF924600DFBC5A /* Foundation.framework */; };
 		76D24BAF17FF924600DFBC5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D24B8E17FF924600DFBC5A /* UIKit.framework */; };
 		AA39D4591811ACEB0000CDF8 /* TCSBleuContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA39D4581811ACEB0000CDF8 /* TCSBleuContentViewController.m */; };
+		AA82B3BF1833F91F0094C560 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA82B3BE1833F91F0094C560 /* Settings.bundle */; };
 		AA87476A181E26E400ECBC74 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76D24B9217FF924600DFBC5A /* Info.plist */; };
 		AAACA51D180DF73A00362408 /* TCSBleuBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAACA51C180DF73A00362408 /* TCSBleuBeaconManager.m */; };
 		AAEBF2EC1810FC6B00C3DC59 /* BleuSampleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEBF2EA1810FC6B00C3DC59 /* BleuSampleTest.m */; };
@@ -52,6 +53,7 @@
 		76D24BAC17FF924600DFBC5A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AA39D4571811ACEB0000CDF8 /* TCSBleuContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSBleuContentViewController.h; sourceTree = "<group>"; };
 		AA39D4581811ACEB0000CDF8 /* TCSBleuContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSBleuContentViewController.m; sourceTree = "<group>"; };
+		AA82B3BE1833F91F0094C560 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AAACA519180DF2FE00362408 /* default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default.plist; sourceTree = "<group>"; };
 		AAACA51B180DF73A00362408 /* TCSBleuBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSBleuBeaconManager.h; sourceTree = "<group>"; };
 		AAACA51C180DF73A00362408 /* TCSBleuBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSBleuBeaconManager.m; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		76D24B9117FF924600DFBC5A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA82B3BE1833F91F0094C560 /* Settings.bundle */,
 				76D24B9217FF924600DFBC5A /* Info.plist */,
 				76D24B9317FF924600DFBC5A /* InfoPlist.strings */,
 				76D24B9617FF924600DFBC5A /* main.m */,
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA82B3BF1833F91F0094C560 /* Settings.bundle in Resources */,
 				76D24BA617FF924600DFBC5A /* Images.xcassets in Resources */,
 				76D24B9517FF924600DFBC5A /* InfoPlist.strings in Resources */,
 				76D24B9E17FF924600DFBC5A /* Main.storyboard in Resources */,
