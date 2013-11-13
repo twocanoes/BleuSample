@@ -8,7 +8,6 @@
 
 #import "TCSAppDelegate.h"
 #import "TCSBleuBeaconManager.h"
-#import "TestFlight.h"
 
 @interface TCSAppDelegate (){
 }
@@ -25,8 +24,6 @@
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	[TestFlight takeOff:@"8523b27e-0201-42c6-8ace-5f7c1e06cd77"];
-
     return YES;
 }
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
