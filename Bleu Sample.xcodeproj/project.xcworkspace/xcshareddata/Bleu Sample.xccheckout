@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BD10AFB2-F13F-4E60-B8CD-CAF36642638A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Bleu Sample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>82BE2C64-B552-44B2-8C85-DD909EEB5E00</key>
+		<string>ssh://github.com/twocanoes/BleuSample.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Bleu Sample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>82BE2C64-B552-44B2-8C85-DD909EEB5E00</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/twocanoes/BleuSample.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>82BE2C64-B552-44B2-8C85-DD909EEB5E00</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>82BE2C64-B552-44B2-8C85-DD909EEB5E00</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BleuSample</string>
+		</dict>
+	</array>
+</dict>
+</plist>
