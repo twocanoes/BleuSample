@@ -8,6 +8,7 @@
 
 #import "TCSAppDelegate.h"
 #import "TCSBleuBeaconManager.h"
+#import "TestFlight.h"
 
 @interface TCSAppDelegate (){
 }
@@ -17,11 +18,14 @@
 
 @implementation TCSAppDelegate 
 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
++ (void)initialize
 {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	[defaults registerDefaults:@{@"bleuConfigURL": @"https://dl.dropboxusercontent.com/s/ez2zprbn7825x8r/default.plist"}];
+	[defaults registerDefaults:@{@"bleuConfigURL": @"https://dl.dropboxusercontent.com/u/5770480/default.plist"}];
+}
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+	[TestFlight takeOff:@"8523b27e-0201-42c6-8ace-5f7c1e06cd77"];
 
     return YES;
 }
