@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 /*!
  This class is a singleton that serves as a delegate to CoreLocation and sends
  out notificatios as location events arrive. CoreLocation callbacks have to occurr
@@ -32,10 +33,11 @@ extern NSString * const TCSDidEnterBleuRegionNotification;
 extern NSString * const TCSDidExitBleuRegionNotification;
 extern NSString * const TCSBleuRangingNotification;
 
-@protocol CLLocationManagerDelegate;
-
 @interface TCSBleuBeaconManager : NSObject <CLLocationManagerDelegate>
 @property (strong, readonly) NSString *defaultURL;
+@property (strong, readonly) NSString *entryText;
+@property (strong, readonly) NSString *exitText;
+
 + (instancetype) sharedManager;
 
 /*!

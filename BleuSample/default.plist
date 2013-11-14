@@ -4,8 +4,10 @@
 <dict>
 	<key>proximityUUID</key>
 	<string>e2c56db5-dffb-48d2-b060-d0f5a71096e0</string>
-	<key>pushText</key>
+	<key>entryText</key>
 	<string>Welcome to Bleu!</string>
+	<key>exitText</key>
+	<string>Come again soon!</string>
 	<key>defaultURL</key>
 	<string>http://www.twocanoes.com/bleu</string>
 	<key>URLs</key>
@@ -14,18 +16,9 @@
 		<dict>
 			<key>2</key>
 			<array>
-				<string>http://tc-static-staging.s3.amazonaws.com/bleusample/latin_school/far.html</string>
-				<string>http://tc-static-staging.s3.amazonaws.com/bleusample/latin_school/near1/near.html</string>
-				<string>http://tc-static-staging.s3.amazonaws.com/bleusample/latin_school/near1/immediate.html</string>
-			</array>
-		</dict>
-		<key>2</key>
-		<dict>
-			<key>2</key>
-			<array>
-				<string>http://tc-static-staging.s3.amazonaws.com/bleusample/hotel/far.html</string>
-				<string>http://tc-static-staging.s3.amazonaws.com/bleusample/hotel/near1/near.html</string>
-				<string>http://tc-static-staging.s3.amazonaws.com/bleusample/hotel/near1/immediate.html</string>
+				<string>https://dl.dropboxusercontent.com/u/108837852/bleusample/realm.html</string>
+				<string>https://dl.dropboxusercontent.com/u/108837852/bleusample/region1/region.html</string>
+				<string>https://dl.dropboxusercontent.com/u/108837852/bleusample/region1/react1.html</string>
 			</array>
 		</dict>
 	</dict>

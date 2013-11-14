@@ -30,16 +30,10 @@
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	NSString *configURL = [defaults stringForKey:@"bleuConfigURL"];
 	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:configURL]];
-	UILabel *accuracyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0., 20., 100., 20.)];
-	accuracyLabel.backgroundColor = [UIColor whiteColor];
-	accuracyLabel.text = @"Accuracy";
-	//[self.view addSubview:accuracyLabel];
-	//self.accuracyLabel = accuracyLabel;
 	UIProgressView *progress = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
 	progress.progress = 0.0;
 	CGRect frame = progress.frame;
 	frame.size.width = self.view.frame.size.width;
-//	frame.size.height = 10.0;
 	frame.origin.x = 0.0;
 	frame.origin.y = 20.0;
 	progress.frame = frame;
@@ -64,11 +58,6 @@
 	}];
 }
 
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-	//[self.accuracyLabel removeFromSuperview];
-	
-}
 - (void)loadURLs:(NSArray *)URLs
 {
 	[[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -92,8 +81,9 @@
 		NSDictionary *info = [note userInfo];
 		CLBeaconRegion *beaconRegion = info[@"region"];
 		DLog(@"Received Enter Notificationf for beacon %@", beaconRegion.identifier);
+		TCSBleuBeaconManager *manager = [TCSBleuBeaconManager sharedManager];
 		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Entered Region" message:@"You have entered the region for an iBeacon" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Entered Region" message:manager.entryText delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
 			[alert show];
 		}];
 	}];
@@ -101,8 +91,9 @@
 		NSDictionary *info = [note userInfo];
 		CLBeaconRegion *beaconRegion = info[@"region"];
 		DLog(@"Received Exit Notificationf for beacon %@", beaconRegion.identifier);
+		TCSBleuBeaconManager *manager = [TCSBleuBeaconManager sharedManager];
 		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exited Region" message:@"You have exited the region for an iBeacon" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exited Region" message:manager.exitText delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
 			[alert show];
 			self.selectedIndex = 0;
 		}];
@@ -115,9 +106,10 @@
 		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
 			self.selectedIndex = index;
 			//self.accuracyLabel.text = [NSString stringWithFormat:@"%f", beacon.accuracy];
-			CGFloat progress = beacon.accuracy / 40.0;
+			CGFloat progress = pow(10.0, beacon.accuracy);
+			DLog(@"Accuracy progress: %f", progress);
 			if (progress > 1.0) progress = 1.0;
-			[self.progressView setProgress:(1.0 - progress) animated:YES];
+			//[self.progressView setProgress:(1.0 - progress) animated:YES];
 		}];
 	}];
 }
