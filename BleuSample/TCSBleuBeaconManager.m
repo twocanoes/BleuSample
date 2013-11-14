@@ -17,6 +17,8 @@ NSString * const TCSBleuRangingNotification = @"TCSBleuRangingNotification";
 @property (nonatomic, strong) NSMutableDictionary *URLStore;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (strong, readwrite) NSString *defaultURL;
+@property (strong, readwrite) NSString *entryText;
+@property (strong, readwrite) NSString *exitText;
 
 @end
 
@@ -60,6 +62,8 @@ NSString * const TCSBleuRangingNotification = @"TCSBleuRangingNotification";
 	NSString *UUID = [mappingDict[@"proximityUUID"] uppercaseString];
 	NSDictionary *URLs = mappingDict[@"URLs"];
 	self.defaultURL = mappingDict[@"defaultURL"];
+	self.entryText = mappingDict[@"entryText"];
+	self.exitText = mappingDict[@"exitText"];
 	NSArray *majorKeys = [URLs allKeys];
 	for (NSString *majorKey in majorKeys) {
 		NSDictionary *minorStations = URLs[majorKey];
@@ -109,7 +113,7 @@ NSString * const TCSBleuRangingNotification = @"TCSBleuRangingNotification";
 			break;
 		case UIApplicationStateBackground: {
 			UILocalNotification *notification = [[UILocalNotification alloc] init];
-			notification.alertBody = @"You have entered Region for beacon";
+			notification.alertBody = self.entryText;
 			[[UIApplication sharedApplication] presentLocalNotificationNow:notification];
 		}
 		default:
@@ -132,7 +136,7 @@ NSString * const TCSBleuRangingNotification = @"TCSBleuRangingNotification";
 			break;
 		case UIApplicationStateBackground:{
 			UILocalNotification *notification = [[UILocalNotification alloc] init];
-			notification.alertBody = @"You have exited Region for beacon";
+			notification.alertBody = self.exitText;
 			[[UIApplication sharedApplication] presentLocalNotificationNow:notification];
 		}
 		default:
