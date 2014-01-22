@@ -19,9 +19,10 @@
 		76D24BAE17FF924600DFBC5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D24B8A17FF924600DFBC5A /* Foundation.framework */; };
 		76D24BAF17FF924600DFBC5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D24B8E17FF924600DFBC5A /* UIKit.framework */; };
 		AA39D4591811ACEB0000CDF8 /* TCSBleuContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA39D4581811ACEB0000CDF8 /* TCSBleuContentViewController.m */; };
+		AA82B3BF1833F91F0094C560 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA82B3BE1833F91F0094C560 /* Settings.bundle */; };
 		AA87476A181E26E400ECBC74 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76D24B9217FF924600DFBC5A /* Info.plist */; };
 		AAACA51D180DF73A00362408 /* TCSBleuBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAACA51C180DF73A00362408 /* TCSBleuBeaconManager.m */; };
-		AAEBF2EC1810FC6B00C3DC59 /* BleuClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEBF2EA1810FC6B00C3DC59 /* BleuClientTest.m */; };
+		AAEBF2EC1810FC6B00C3DC59 /* BleuSampleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEBF2EA1810FC6B00C3DC59 /* BleuSampleTest.m */; };
 		AAEBF2F018116B1200C3DC59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAEBF2EE18116B0E00C3DC59 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -52,11 +53,12 @@
 		76D24BAC17FF924600DFBC5A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AA39D4571811ACEB0000CDF8 /* TCSBleuContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSBleuContentViewController.h; sourceTree = "<group>"; };
 		AA39D4581811ACEB0000CDF8 /* TCSBleuContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSBleuContentViewController.m; sourceTree = "<group>"; };
+		AA82B3BE1833F91F0094C560 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AAACA519180DF2FE00362408 /* default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default.plist; sourceTree = "<group>"; };
 		AAACA51B180DF73A00362408 /* TCSBleuBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSBleuBeaconManager.h; sourceTree = "<group>"; };
 		AAACA51C180DF73A00362408 /* TCSBleuBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSBleuBeaconManager.m; sourceTree = "<group>"; };
-		AAEBF2E91810FC6B00C3DC59 /* BleuClientTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BleuClientTests-Info.plist"; sourceTree = "<group>"; };
-		AAEBF2EA1810FC6B00C3DC59 /* BleuClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleuClientTest.m; sourceTree = "<group>"; };
+		AAEBF2E91810FC6B00C3DC59 /* BleuSampleTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BleuSampleTests-Info.plist"; sourceTree = "<group>"; };
+		AAEBF2EA1810FC6B00C3DC59 /* BleuSampleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleuSampleTest.m; sourceTree = "<group>"; };
 		AAEBF2EF18116B0E00C3DC59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				76D24B9017FF924600DFBC5A /* Source */,
-				76D24BB217FF924600DFBC5A /* Bleu Client Tests */,
+				76D24BB217FF924600DFBC5A /* Bleu Sample Tests */,
 				76D24B8917FF924600DFBC5A /* Frameworks */,
 				76D24B8817FF924600DFBC5A /* Products */,
 			);
@@ -129,12 +131,13 @@
 				76D24B9117FF924600DFBC5A /* Supporting Files */,
 			);
 			name = Source;
-			path = BleuUser;
+			path = BleuSample;
 			sourceTree = SOURCE_ROOT;
 		};
 		76D24B9117FF924600DFBC5A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA82B3BE1833F91F0094C560 /* Settings.bundle */,
 				76D24B9217FF924600DFBC5A /* Info.plist */,
 				76D24B9317FF924600DFBC5A /* InfoPlist.strings */,
 				76D24B9617FF924600DFBC5A /* main.m */,
@@ -143,15 +146,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		76D24BB217FF924600DFBC5A /* Bleu Client Tests */ = {
+		76D24BB217FF924600DFBC5A /* Bleu Sample Tests */ = {
 			isa = PBXGroup;
 			children = (
-				AAEBF2E91810FC6B00C3DC59 /* BleuClientTests-Info.plist */,
-				AAEBF2EA1810FC6B00C3DC59 /* BleuClientTest.m */,
+				AAEBF2E91810FC6B00C3DC59 /* BleuSampleTests-Info.plist */,
+				AAEBF2EA1810FC6B00C3DC59 /* BleuSampleTest.m */,
 				76D24BB317FF924600DFBC5A /* Supporting Files */,
 			);
-			name = "Bleu Client Tests";
-			path = BleuUserTests;
+			name = "Bleu Sample Tests";
+			path = BleuSampleTests;
 			sourceTree = "<group>";
 		};
 		76D24BB317FF924600DFBC5A /* Supporting Files */ = {
@@ -182,9 +185,9 @@
 			productReference = 76D24B8717FF924600DFBC5A /* Bleu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		76D24BAA17FF924600DFBC5A /* Bleu UserTests */ = {
+		76D24BAA17FF924600DFBC5A /* BleuSampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76D24BBF17FF924600DFBC5A /* Build configuration list for PBXNativeTarget "Bleu UserTests" */;
+			buildConfigurationList = 76D24BBF17FF924600DFBC5A /* Build configuration list for PBXNativeTarget "BleuSampleTests" */;
 			buildPhases = (
 				76D24BA717FF924600DFBC5A /* Sources */,
 				76D24BA817FF924600DFBC5A /* Frameworks */,
@@ -195,7 +198,7 @@
 			dependencies = (
 				76D24BB117FF924600DFBC5A /* PBXTargetDependency */,
 			);
-			name = "Bleu UserTests";
+			name = BleuSampleTests;
 			productName = BeaconBumpTests;
 			productReference = 76D24BAB17FF924600DFBC5A /* Bleu UserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -218,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 76D24B8217FF924600DFBC5A /* Build configuration list for PBXProject "Bleu Demo" */;
+			buildConfigurationList = 76D24B8217FF924600DFBC5A /* Build configuration list for PBXProject "Bleu Sample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,7 +235,7 @@
 			projectRoot = "";
 			targets = (
 				76D24B8617FF924600DFBC5A /* Bleu */,
-				76D24BAA17FF924600DFBC5A /* Bleu UserTests */,
+				76D24BAA17FF924600DFBC5A /* BleuSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA82B3BF1833F91F0094C560 /* Settings.bundle in Resources */,
 				76D24BA617FF924600DFBC5A /* Images.xcassets in Resources */,
 				76D24B9517FF924600DFBC5A /* InfoPlist.strings in Resources */,
 				76D24B9E17FF924600DFBC5A /* Main.storyboard in Resources */,
@@ -275,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAEBF2EC1810FC6B00C3DC59 /* BleuClientTest.m in Sources */,
+				AAEBF2EC1810FC6B00C3DC59 /* BleuSampleTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +340,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 104;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -378,7 +382,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 104;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -401,8 +405,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = BleuUser/Prefix.pch;
-				INFOPLIST_FILE = BleuUser/Info.plist;
+				GCC_PREFIX_HEADER = BleuSample/Prefix.pch;
+				INFOPLIST_FILE = BleuSample/Info.plist;
 				OTHER_LDFLAGS = " -lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -415,8 +419,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = BleuUser/Prefix.pch;
-				INFOPLIST_FILE = BleuUser/Info.plist;
+				GCC_PREFIX_HEADER = BleuSample/Prefix.pch;
+				INFOPLIST_FILE = BleuSample/Info.plist;
 				OTHER_LDFLAGS = " -lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -434,12 +438,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = BleuUser/Prefix.pch;
+				GCC_PREFIX_HEADER = BleuSample/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "BleuUserTests/BleuClientTests-Info.plist";
+				INFOPLIST_FILE = "BleuSampleTests/BleuSampleTests-Info.plist";
 				PRODUCT_NAME = "Bleu UserTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -457,8 +461,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = BleuUser/Prefix.pch;
-				INFOPLIST_FILE = "BleuUserTests/BleuClientTests-Info.plist";
+				GCC_PREFIX_HEADER = BleuSample/Prefix.pch;
+				INFOPLIST_FILE = "BleuSampleTests/BleuSampleTests-Info.plist";
 				PRODUCT_NAME = "Bleu UserTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -468,7 +472,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		76D24B8217FF924600DFBC5A /* Build configuration list for PBXProject "Bleu Demo" */ = {
+		76D24B8217FF924600DFBC5A /* Build configuration list for PBXProject "Bleu Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76D24BBA17FF924600DFBC5A /* Debug */,
@@ -486,7 +490,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76D24BBF17FF924600DFBC5A /* Build configuration list for PBXNativeTarget "Bleu UserTests" */ = {
+		76D24BBF17FF924600DFBC5A /* Build configuration list for PBXNativeTarget "BleuSampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76D24BC017FF924600DFBC5A /* Debug */,

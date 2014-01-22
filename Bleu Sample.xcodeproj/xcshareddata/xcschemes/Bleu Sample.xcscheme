@@ -17,7 +17,7 @@
                BlueprintIdentifier = "76D24B8617FF924600DFBC5A"
                BuildableName = "Bleu.app"
                BlueprintName = "Bleu"
-               ReferencedContainer = "container:Bleu Demo.xcodeproj">
+               ReferencedContainer = "container:Bleu Sample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "76D24BAA17FF924600DFBC5A"
                BuildableName = "Bleu UserTests.xctest"
-               BlueprintName = "Bleu UserTests"
-               ReferencedContainer = "container:Bleu Demo.xcodeproj">
+               BlueprintName = "BleuSampleTests"
+               ReferencedContainer = "container:Bleu Sample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "76D24B8617FF924600DFBC5A"
             BuildableName = "Bleu.app"
             BlueprintName = "Bleu"
-            ReferencedContainer = "container:Bleu Demo.xcodeproj">
+            ReferencedContainer = "container:Bleu Sample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "76D24B8617FF924600DFBC5A"
             BuildableName = "Bleu.app"
             BlueprintName = "Bleu"
-            ReferencedContainer = "container:Bleu Demo.xcodeproj">
+            ReferencedContainer = "container:Bleu Sample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "76D24B8617FF924600DFBC5A"
             BuildableName = "Bleu.app"
             BlueprintName = "Bleu"
-            ReferencedContainer = "container:Bleu Demo.xcodeproj">
+            ReferencedContainer = "container:Bleu Sample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
