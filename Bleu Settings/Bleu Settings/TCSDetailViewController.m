@@ -111,7 +111,7 @@
                                    TCSBleuStationProximityUUID: self.uuidField.text,
                                    TCSBleuStationMajor: [NSNumber numberWithInteger:[self.majorField.text integerValue]],
                                    TCSBleuStationMinor: [NSNumber numberWithInteger:[self.minorField.text integerValue]],
-                                   TCSBleuStationPower: [NSNumber numberWithInteger:[self.minorField.text integerValue]],
+                                   TCSBleuStationPower: [NSNumber numberWithInteger:[self.powerField.text integerValue]],
                                    TCSBleuStationCalibration: [NSNumber numberWithInteger:[self.calibrationField.text integerValue]],
                                    TCSBleuStationLatitude: [NSNumber numberWithFloat:[self.latitudeField.text floatValue]],
                                    TCSBleuStationLongitude: [NSNumber numberWithFloat:[self.longitudeField.text floatValue]]};

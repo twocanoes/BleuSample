@@ -10,6 +10,10 @@
 
 @implementation TCSAppDelegate
 
++ (void)initialize
+{
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"TCSLibbleuDebugLogging": @YES}];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
