@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D50B8796-DEFD-4A61-A6CC-850857B02611</string>
+	<string>8C14B051-9071-43C2-8639-2A8435D454DB</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Bleu Settings</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/twocanoes/BleuSample.git</string>
+	<string>ssh://github.com/twocanoes/Bleu.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

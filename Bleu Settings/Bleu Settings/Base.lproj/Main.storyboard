@@ -226,6 +226,9 @@
                                         <state key="normal" title="Change Password">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changePassword:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="AeX-1i-tJJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

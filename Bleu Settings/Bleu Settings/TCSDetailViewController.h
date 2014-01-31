@@ -28,5 +28,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *changePasswordButton;
 
 - (IBAction)authenticate:(id)sender;
+- (IBAction)changePassword:(id)sender;
 
 @end

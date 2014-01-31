@@ -6,10 +6,9 @@
 //  Copyright (c) 2014 Twocanoes Software, Inc. All rights reserved.
 //
 
+#import "TCSBleuStationManager.h"
 #import "TCSMasterViewController.h"
-
 #import "TCSDetailViewController.h"
-#import "TCSBleuStation.h"
 
 @interface TCSMasterViewController () {
     NSMutableArray *_objects;
@@ -32,6 +31,7 @@
     self.stationManager = [[TCSBleuStationManager alloc] init];
     self.stationManager.delegate = self;
     [self.stationManager scanForStations];
+    NSLog(@"Build %i, v%s", TCSLibbleuBuildNumber, TCSLibbleuVersionNumber);
     _objects = [NSMutableArray array];
     
 }
@@ -88,14 +88,18 @@
 
 #pragma mark TCSBleuStationManagerDelegate
 
-- (void)bleuStationManager:(TCSBleuStationManager *)manager didDiscoverStation:(TCSBleuStation *)station
+- (void)stationManager:(TCSBleuStationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"Error: %@", error);
+}
+- (void)stationManager:(TCSBleuStationManager *)manager didDiscoverStation:(TCSBleuStation *)station
 {
     [_objects addObject:station];
     NSInteger index = [_objects count] - 1;
     [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
-- (void)bleuStationManager:(TCSBleuStationManager *)manager didDisconnectStationWithIdentifier:(NSString *)hardwareName
+- (void)stationManager:(TCSBleuStationManager *)manager didDisconnectStationWithIdentifier:(NSString *)hardwareName
 {
     NSUInteger index = [_objects indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
         TCSBleuStation *station = obj;

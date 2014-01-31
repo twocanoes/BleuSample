@@ -8,11 +8,15 @@
 
 #import "TCSDetailViewController.h"
 
+typedef NS_ENUM(NSInteger, TCSAlertType) {
+    kAlertTypeAuthenticate = 0,
+    kAlertTypeChangePassword
+};
+
 @interface TCSDetailViewController () <UIAlertViewDelegate>
 
 @property (weak, nonatomic) UITextField *activeTextField;
 
-- (void)configureView;
 - (void)keyboardDidShow:(NSNotification *)note;
 - (void)keyboardWillHide:(NSNotification *)note;
 
@@ -66,37 +70,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)station:(TCSBleuStation *)station didReadValues:(NSDictionary *)values error:(NSError *)error
-{
-    NSArray *keys = [values allKeys];
-    for (NSString *key in keys) {
-        if ([key isEqualToString:TCSBleuStationName]) {
-            self.nameField.text = values[key];
-        } else if ([key isEqualToString:TCSBleuStationProximityUUID]) {
-            self.uuidField.text = values[key];
-        } else if ([key isEqualToString:TCSBleuStationMajor]) {
-            self.majorField.text = [values[key] stringValue];
-        } else if ([key isEqualToString:TCSBleuStationMinor]) {
-            self.minorField.text = [values[key] stringValue];
-        } else if ([key isEqualToString:TCSBleuStationPower]) {
-            self.powerField.text = [values[key] stringValue];
-        } else if ([key isEqualToString:TCSBleuStationCalibration]) {
-            self.calibrationField.text = [values[key] stringValue];
-        } else if ([key isEqualToString:TCSBleuStationLatitude]) {
-            self.latitudeField.text = [values[key] stringValue];
-        } else if ([key isEqualToString:TCSBleuStationLongitude]) {
-            self.longitudeField.text = [values[key] stringValue];
-        }
-    }
-}
-
-- (void)station:(TCSBleuStation *)station didAuthenticateError:(NSError *)error
-{
-    NSInteger code = error.code;
-    if (!error || code == 1) {
-        [self enableEditing];
-    }
-}
+#pragma mark IBActions
 
 - (IBAction)authenticate:(id)sender
 {
@@ -104,7 +78,7 @@
     if ([title isEqualToString:@"Authenticate"]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authenticate" message:@"Enter your password" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
         alert.alertViewStyle = UIAlertViewStyleSecureTextInput;
-        alert.delegate = self;
+        alert.tag = kAlertTypeAuthenticate;
         [alert show];
     } else {
         NSDictionary *settings = @{TCSBleuStationName: self.nameField.text,
@@ -119,13 +93,77 @@
     }
 }
 
+- (IBAction)changePassword:(id)sender
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Change Password" message:@"Enter your new password and tap Save to update your password." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Save", nil];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    alertView.tag = kAlertTypeChangePassword;
+    [alertView show];
+}
+
+#pragma mark - UIAlertViewDelegate
+
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex) {
-        UITextField *field = [alertView textFieldAtIndex:0];
-        [self.station authenticateWithPassword:field.text];
+    switch (alertView.tag) {
+        case kAlertTypeAuthenticate:
+            if (buttonIndex) {
+                UITextField *field = [alertView textFieldAtIndex:0];
+                [self.station authenticateWithPassword:field.text];
+            }
+            break;
+        case kAlertTypeChangePassword:
+            if (buttonIndex) {
+                UITextField *field = [alertView textFieldAtIndex:0];
+                [self.station writeValues:@{TCSBleuStationPassword: field.text}];
+            }
+        default:
+            break;
     }
 }
+
+#pragma mark TCSBleuStationDelegate
+
+- (void)station:(TCSBleuStation *)station didReadProperty:(NSString *)property value:(id)value error:(NSError *)error
+{
+    if ([property isEqualToString:TCSBleuStationName]) {
+        self.nameField.text = value;
+    } else if ([property isEqualToString:TCSBleuStationProximityUUID]) {
+        self.uuidField.text = value;
+    } else if ([property isEqualToString:TCSBleuStationMajor]) {
+        self.majorField.text = [value stringValue];
+    } else if ([property isEqualToString:TCSBleuStationMinor]) {
+        self.minorField.text = [value stringValue];
+    } else if ([property isEqualToString:TCSBleuStationPower]) {
+        self.powerField.text = [value stringValue];
+    } else if ([property isEqualToString:TCSBleuStationCalibration]) {
+        self.calibrationField.text = [NSString stringWithFormat:@"%u", [value unsignedCharValue]];
+    } else if ([property isEqualToString:TCSBleuStationLatitude]) {
+        self.latitudeField.text = [value stringValue];
+    } else if ([property isEqualToString:TCSBleuStationLongitude]) {
+        self.longitudeField.text = [value stringValue];
+    }
+}
+
+- (void)station:(TCSBleuStation *)station didWriteProperty:(NSString *)property value:(id)value error:(NSError *)error
+{
+    NSLog(@"Wrote %@, error: %@", property, error);
+}
+
+- (void)station:(TCSBleuStation *)station didAuthenticateError:(NSError *)error
+{
+    if (!error ) {
+        [self enableEditing];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication Failure"
+                                                        message:error.userInfo[NSLocalizedDescriptionKey]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
