@@ -87,8 +87,8 @@ typedef NS_ENUM(NSInteger, TCSAlertType) {
                                    TCSBleuStationMinor: [NSNumber numberWithInteger:[self.minorField.text integerValue]],
                                    TCSBleuStationPower: [NSNumber numberWithInteger:[self.powerField.text integerValue]],
                                    TCSBleuStationCalibration: [NSNumber numberWithInteger:[self.calibrationField.text integerValue]],
-                                   TCSBleuStationLatitude: [NSNumber numberWithFloat:[self.latitudeField.text floatValue]],
-                                   TCSBleuStationLongitude: [NSNumber numberWithFloat:[self.longitudeField.text floatValue]]};
+                                   TCSBleuStationLatitude: [NSNumber numberWithDouble:[self.latitudeField.text doubleValue]],
+                                   TCSBleuStationLongitude: [NSNumber numberWithDouble:[self.longitudeField.text doubleValue]]};
         [self.station writeValues:settings];
     }
 }
@@ -147,7 +147,7 @@ typedef NS_ENUM(NSInteger, TCSAlertType) {
 
 - (void)station:(TCSBleuStation *)station didWriteProperty:(NSString *)property value:(id)value error:(NSError *)error
 {
-    NSLog(@"Wrote %@, error: %@", property, error);
+    NSLog(@"Wrote %@, with value: %@ error: %@", property, value, error);
 }
 
 - (void)station:(TCSBleuStation *)station didAuthenticateError:(NSError *)error
