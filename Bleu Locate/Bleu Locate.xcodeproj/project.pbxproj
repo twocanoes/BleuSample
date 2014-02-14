@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAC3993618905C78005C02D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3993518905C78005C02D8 /* Foundation.framework */; };
+		AAC3993818905C78005C02D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3993718905C78005C02D8 /* CoreGraphics.framework */; };
+		AAC3993A18905C78005C02D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3993918905C78005C02D8 /* UIKit.framework */; };
+		AAC3994018905C78005C02D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAC3993E18905C78005C02D8 /* InfoPlist.strings */; };
+		AAC3994218905C78005C02D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3994118905C78005C02D8 /* main.m */; };
+		AAC3994618905C78005C02D8 /* TCSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3994518905C78005C02D8 /* TCSAppDelegate.m */; };
+		AAC3994818905C78005C02D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC3994718905C78005C02D8 /* Images.xcassets */; };
+		AAC3994F18905C78005C02D8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3994E18905C78005C02D8 /* XCTest.framework */; };
+		AAC3995018905C78005C02D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3993518905C78005C02D8 /* Foundation.framework */; };
+		AAC3995118905C78005C02D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3993918905C78005C02D8 /* UIKit.framework */; };
+		AAC3995918905C78005C02D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAC3995718905C78005C02D8 /* InfoPlist.strings */; };
+		AAC3995B18905C78005C02D8 /* Bleu_LocateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3995A18905C78005C02D8 /* Bleu_LocateTests.m */; };
+		AAC3996618905D62005C02D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC3996418905D62005C02D8 /* Main.storyboard */; };
+		AAC3996B18905D72005C02D8 /* TCSBleuBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3996818905D72005C02D8 /* TCSBleuBeaconManager.m */; };
+		AAC3996C18905D72005C02D8 /* TCSBleuContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3996A18905D72005C02D8 /* TCSBleuContentViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAC3995218905C78005C02D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC3992A18905C78005C02D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAC3993118905C78005C02D8;
+			remoteInfo = "Bleu Locate";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAC3993218905C78005C02D8 /* Bleu Locate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bleu Locate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC3993518905C78005C02D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AAC3993718905C78005C02D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AAC3993918905C78005C02D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AAC3993D18905C78005C02D8 /* Bleu Locate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bleu Locate-Info.plist"; sourceTree = "<group>"; };
+		AAC3993F18905C78005C02D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AAC3994118905C78005C02D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AAC3994318905C78005C02D8 /* Bleu Locate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bleu Locate-Prefix.pch"; sourceTree = "<group>"; };
+		AAC3994418905C78005C02D8 /* TCSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCSAppDelegate.h; sourceTree = "<group>"; };
+		AAC3994518905C78005C02D8 /* TCSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCSAppDelegate.m; sourceTree = "<group>"; };
+		AAC3994718905C78005C02D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AAC3994D18905C78005C02D8 /* Bleu LocateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bleu LocateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC3994E18905C78005C02D8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AAC3995618905C78005C02D8 /* Bleu LocateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bleu LocateTests-Info.plist"; sourceTree = "<group>"; };
+		AAC3995818905C78005C02D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AAC3995A18905C78005C02D8 /* Bleu_LocateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bleu_LocateTests.m; sourceTree = "<group>"; };
+		AAC3996518905D62005C02D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Bleu Locate/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		AAC3996718905D72005C02D8 /* TCSBleuBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSBleuBeaconManager.h; sourceTree = "<group>"; };
+		AAC3996818905D72005C02D8 /* TCSBleuBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSBleuBeaconManager.m; sourceTree = "<group>"; };
+		AAC3996918905D72005C02D8 /* TCSBleuContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSBleuContentViewController.h; sourceTree = "<group>"; };
+		AAC3996A18905D72005C02D8 /* TCSBleuContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSBleuContentViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAC3992F18905C78005C02D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC3993818905C78005C02D8 /* CoreGraphics.framework in Frameworks */,
+				AAC3993A18905C78005C02D8 /* UIKit.framework in Frameworks */,
+				AAC3993618905C78005C02D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC3994A18905C78005C02D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC3994F18905C78005C02D8 /* XCTest.framework in Frameworks */,
+				AAC3995118905C78005C02D8 /* UIKit.framework in Frameworks */,
+				AAC3995018905C78005C02D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAC3992918905C78005C02D8 = {
+			isa = PBXGroup;
+			children = (
+				AAC3993B18905C78005C02D8 /* Bleu Locate */,
+				AAC3995418905C78005C02D8 /* Bleu LocateTests */,
+				AAC3993418905C78005C02D8 /* Frameworks */,
+				AAC3993318905C78005C02D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAC3993318905C78005C02D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAC3993218905C78005C02D8 /* Bleu Locate.app */,
+				AAC3994D18905C78005C02D8 /* Bleu LocateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAC3993418905C78005C02D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAC3993518905C78005C02D8 /* Foundation.framework */,
+				AAC3993718905C78005C02D8 /* CoreGraphics.framework */,
+				AAC3993918905C78005C02D8 /* UIKit.framework */,
+				AAC3994E18905C78005C02D8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAC3993B18905C78005C02D8 /* Bleu Locate */ = {
+			isa = PBXGroup;
+			children = (
+				AAC3996718905D72005C02D8 /* TCSBleuBeaconManager.h */,
+				AAC3996818905D72005C02D8 /* TCSBleuBeaconManager.m */,
+				AAC3996918905D72005C02D8 /* TCSBleuContentViewController.h */,
+				AAC3996A18905D72005C02D8 /* TCSBleuContentViewController.m */,
+				AAC3994418905C78005C02D8 /* TCSAppDelegate.h */,
+				AAC3994518905C78005C02D8 /* TCSAppDelegate.m */,
+				AAC3996418905D62005C02D8 /* Main.storyboard */,
+				AAC3994718905C78005C02D8 /* Images.xcassets */,
+				AAC3993C18905C78005C02D8 /* Supporting Files */,
+			);
+			path = "Bleu Locate";
+			sourceTree = "<group>";
+		};
+		AAC3993C18905C78005C02D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAC3993D18905C78005C02D8 /* Bleu Locate-Info.plist */,
+				AAC3993E18905C78005C02D8 /* InfoPlist.strings */,
+				AAC3994118905C78005C02D8 /* main.m */,
+				AAC3994318905C78005C02D8 /* Bleu Locate-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAC3995418905C78005C02D8 /* Bleu LocateTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAC3995A18905C78005C02D8 /* Bleu_LocateTests.m */,
+				AAC3995518905C78005C02D8 /* Supporting Files */,
+			);
+			path = "Bleu LocateTests";
+			sourceTree = "<group>";
+		};
+		AAC3995518905C78005C02D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAC3995618905C78005C02D8 /* Bleu LocateTests-Info.plist */,
+				AAC3995718905C78005C02D8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAC3993118905C78005C02D8 /* Bleu Locate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC3995E18905C78005C02D8 /* Build configuration list for PBXNativeTarget "Bleu Locate" */;
+			buildPhases = (
+				AAC3992E18905C78005C02D8 /* Sources */,
+				AAC3992F18905C78005C02D8 /* Frameworks */,
+				AAC3993018905C78005C02D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bleu Locate";
+			productName = "Bleu Locate";
+			productReference = AAC3993218905C78005C02D8 /* Bleu Locate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAC3994C18905C78005C02D8 /* Bleu LocateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC3996118905C78005C02D8 /* Build configuration list for PBXNativeTarget "Bleu LocateTests" */;
+			buildPhases = (
+				AAC3994918905C78005C02D8 /* Sources */,
+				AAC3994A18905C78005C02D8 /* Frameworks */,
+				AAC3994B18905C78005C02D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAC3995318905C78005C02D8 /* PBXTargetDependency */,
+			);
+			name = "Bleu LocateTests";
+			productName = "Bleu LocateTests";
+			productReference = AAC3994D18905C78005C02D8 /* Bleu LocateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAC3992A18905C78005C02D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TCS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Twocanoes Software, Inc";
+				TargetAttributes = {
+					AAC3994C18905C78005C02D8 = {
+						TestTargetID = AAC3993118905C78005C02D8;
+					};
+				};
+			};
+			buildConfigurationList = AAC3992D18905C78005C02D8 /* Build configuration list for PBXProject "Bleu Locate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAC3992918905C78005C02D8;
+			productRefGroup = AAC3993318905C78005C02D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAC3993118905C78005C02D8 /* Bleu Locate */,
+				AAC3994C18905C78005C02D8 /* Bleu LocateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAC3993018905C78005C02D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC3996618905D62005C02D8 /* Main.storyboard in Resources */,
+				AAC3994018905C78005C02D8 /* InfoPlist.strings in Resources */,
+				AAC3994818905C78005C02D8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC3994B18905C78005C02D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC3995918905C78005C02D8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAC3992E18905C78005C02D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC3996B18905D72005C02D8 /* TCSBleuBeaconManager.m in Sources */,
+				AAC3996C18905D72005C02D8 /* TCSBleuContentViewController.m in Sources */,
+				AAC3994218905C78005C02D8 /* main.m in Sources */,
+				AAC3994618905C78005C02D8 /* TCSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC3994918905C78005C02D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC3995B18905C78005C02D8 /* Bleu_LocateTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAC3995318905C78005C02D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAC3993118905C78005C02D8 /* Bleu Locate */;
+			targetProxy = AAC3995218905C78005C02D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AAC3993E18905C78005C02D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC3993F18905C78005C02D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AAC3995718905C78005C02D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC3995818905C78005C02D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AAC3996418905D62005C02D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC3996518905D62005C02D8 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAC3995C18905C78005C02D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AAC3995D18905C78005C02D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAC3995F18905C78005C02D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bleu Locate/Bleu Locate-Prefix.pch";
+				INFOPLIST_FILE = "Bleu Locate/Bleu Locate-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AAC3996018905C78005C02D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bleu Locate/Bleu Locate-Prefix.pch";
+				INFOPLIST_FILE = "Bleu Locate/Bleu Locate-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AAC3996218905C78005C02D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bleu Locate.app/Bleu Locate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bleu Locate/Bleu Locate-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Bleu LocateTests/Bleu LocateTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AAC3996318905C78005C02D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bleu Locate.app/Bleu Locate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bleu Locate/Bleu Locate-Prefix.pch";
+				INFOPLIST_FILE = "Bleu LocateTests/Bleu LocateTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAC3992D18905C78005C02D8 /* Build configuration list for PBXProject "Bleu Locate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC3995C18905C78005C02D8 /* Debug */,
+				AAC3995D18905C78005C02D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC3995E18905C78005C02D8 /* Build configuration list for PBXNativeTarget "Bleu Locate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC3995F18905C78005C02D8 /* Debug */,
+				AAC3996018905C78005C02D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC3996118905C78005C02D8 /* Build configuration list for PBXNativeTarget "Bleu LocateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC3996218905C78005C02D8 /* Debug */,
+				AAC3996318905C78005C02D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAC3992A18905C78005C02D8 /* Project object */;
+}
