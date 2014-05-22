@@ -412,7 +412,7 @@
 				INFOPLIST_FILE = "Bleu Settings/Bleu Settings-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/steve/Documents/twocanoes/Bleu/BleuSample/Bleu\\ Settings/Bleu\\ Settings/libbleu",
+					"'$(PROJECT_DIR)/Bleu\\ Settings/libbleu'",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -429,7 +429,7 @@
 				INFOPLIST_FILE = "Bleu Settings/Bleu Settings-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/steve/Documents/twocanoes/Bleu/BleuSample/Bleu\\ Settings/Bleu\\ Settings/libbleu",
+					"'$(PROJECT_DIR)/Bleu\\ Settings/libbleu'",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
