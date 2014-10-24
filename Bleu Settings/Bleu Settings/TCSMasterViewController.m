@@ -30,10 +30,17 @@
 
     self.stationManager = [[TCSBleuStationManager alloc] init];
     self.stationManager.delegate = self;
-    [self.stationManager scanForStations];
     NSLog(@"Build %i, v%s", TCSLibbleuBuildNumber, TCSLibbleuVersionNumber);
     _objects = [NSMutableArray array];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.stationManager stopScan];
+    [_objects removeAllObjects];
+    [self.tableView reloadData];
+    [self.stationManager scanForStationsTimeout:30 mode:TCSStationScanModeAdmin];
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,6 +121,5 @@
         [_objects removeObjectAtIndex:index];
         [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
-    
 }
 @end

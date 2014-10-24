@@ -30,8 +30,8 @@ typedef NS_ENUM(NSInteger, TCSAlertType) {
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self.station readValues:@[TCSBleuStationAllProperties]];
     self.navigationItem.title = self.station.hardwareName;
+    [self.station connect];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -48,6 +48,10 @@ typedef NS_ENUM(NSInteger, TCSAlertType) {
 {
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    if ([self isMovingFromParentViewController]) {
+        [self.station disconnect];
+        self.station = nil;
+    }
 }
 
 - (void)enableEditing
@@ -162,6 +166,16 @@ typedef NS_ENUM(NSInteger, TCSAlertType) {
                                               otherButtonTitles:nil];
         [alert show];
     }
+}
+
+- (void)stationIsReady:(TCSBleuStation *)station
+{
+    self.nameField.text = station.name;
+    self.uuidField.text = station.proximityUUID;
+    self.majorField.text = [station.major stringValue];
+    self.minorField.text = [station.minor stringValue];
+    self.powerField.text = [station.power stringValue];
+    self.calibrationField.text = [station.calibration stringValue];
 }
 
 #pragma mark UITextFieldDelegate
