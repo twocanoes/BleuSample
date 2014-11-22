@@ -34,5 +34,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Bleu Location will monitor for beacons while in the background.</string>
 </dict>
 </plist>

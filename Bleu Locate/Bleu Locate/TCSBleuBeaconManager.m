@@ -84,6 +84,9 @@ NSString * const TCSBleuRangingNotification = @"TCSBleuRangingNotification";
 	@synchronized(self) {
 		regionKeys = [self.URLStore allKeys];
 	}
+    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [self.locationManager requestAlwaysAuthorization];
+    }
 	for (NSString *key in regionKeys) {
 		NSArray *regionTriplet = [key componentsSeparatedByString:@":"];
 		NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:regionTriplet[0]];

@@ -41,21 +41,31 @@
 	[self.view addSubview:progress];
 	self.progressView = progress;
 	
-	[NSURLConnection sendAsynchronousRequest:request queue:self.opQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-		if (!connectionError) {
-				NSDictionary *config = (NSDictionary *)[NSPropertyListSerialization propertyListFromData:data mutabilityOption:NSPropertyListImmutable format:NULL errorDescription:NULL];
-				DLog(@"Config: %@", config);
-				TCSBleuBeaconManager *manager = [TCSBleuBeaconManager sharedManager];
-				[manager addMappingWithDictionary:config];
-			[[NSOperationQueue mainQueue] addOperationWithBlock:^{
-				// This is hard-coded to match the beacons contained in the plist file above.
-				NSArray *URLs = [manager URLsForUUID:@"e2c56db5-dffb-48d2-b060-d0f5a71096e0" major:@"1" minor:@"2"];
-				[self loadURLs:URLs];
-				[self registerNotifications];
-				[manager beginRegionMonitoring];
-			}];
-		}
-	}];
+    [NSURLConnection sendAsynchronousRequest:request queue:self.opQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (!connectionError) {
+
+            //				NSDictionary *config = (NSDictionary *)[NSPropertyListSerialization propertyListFromData:data mutabilityOption:NSPropertyListImmutable format:NULL errorDescription:NULL];
+            NSError *serializationError;
+            NSDictionary *config = [NSPropertyListSerialization propertyListWithData:data options:NSPropertyListImmutable format:NULL error:&serializationError];
+            DLog(@"Config: %@\nError: %@", config, serializationError);
+            if (serializationError) {
+                NSString *decoded = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+                DLog(@"Error: %@ Data: %@", serializationError, decoded);
+            } else {
+                DLog(@"Config: %@", config);
+                TCSBleuBeaconManager *manager = [TCSBleuBeaconManager sharedManager];
+                [manager addMappingWithDictionary:config];
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    // This is hard-coded to match the beacons contained in the plist file above.
+                    NSArray *URLs = [manager URLsForUUID:@"e2c56db5-dffb-48d2-b060-d0f5a71096e0" major:@"1" minor:@"2"];
+                    [self loadURLs:URLs];
+                    [self registerNotifications];
+                    [manager beginRegionMonitoring];
+
+                }];
+            }
+        }
+    }];
 }
 
 - (void)loadURLs:(NSArray *)URLs
